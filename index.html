@@ -743,6 +743,36 @@
 <!-- GHL form embed script -->
 <script src="https://go.otterclick.com/js/form_embed.js"></script>
 
+<!-- Google Ads conversion: fires on GHL form submit (lead) -->
+<script>
+  (function(){
+    var fired = false;
+    window.addEventListener('message', function(event){
+      if (fired) return;
+      var origin = event.origin || '';
+      if (origin.indexOf('otterclick.com') === -1 && origin.indexOf('leadconnectorhq.com') === -1) return;
+      var data = event.data;
+      var isSubmit = false;
+      try {
+        if (typeof data === 'string') {
+          isSubmit = /form.*submit|submit.*success|form_submit/i.test(data);
+        } else if (data && typeof data === 'object') {
+          var str = JSON.stringify(data).toLowerCase();
+          isSubmit = str.indexOf('submit') !== -1 && (str.indexOf('form') !== -1 || str.indexOf('success') !== -1);
+        }
+      } catch (e) { return; }
+      if (isSubmit && typeof gtag === 'function') {
+        fired = true;
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17975121952/udPVCImCuJ0cEKCwmvtC',
+          'value': 1.0,
+          'currency': 'USD'
+        });
+      }
+    });
+  })();
+</script>
+
 <!-- LIGHTBOX OVERLAY -->
 <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" onclick="closeLightbox()">
   <button type="button" class="lightbox__close" aria-label="Close" onclick="closeLightbox(event)">&times;</button>
