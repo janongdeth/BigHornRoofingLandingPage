@@ -423,7 +423,7 @@
             data-layout-iframe-id="inline-Q4ClU4MHx2MGfB9MtSKu-hero"
             data-form-id="Q4ClU4MHx2MGfB9MtSKu"
             title="Website Form"></iframe>
-          <p class="ghl-consent">By submitting this form, you agree to be contacted by Big Horn Roofing by phone call, text message, and email at the number and email address provided, including for marketing purposes, by live and automated means. Message and data rates may apply. Reply STOP at any time to opt out. See our <a href="/privacy.html">Privacy Policy</a>.</p>
+          <p class="ghl-consent">By submitting this form, you agree to be contacted by Big Horn Roofing by phone call, text message, and email at the number and email address provided, including for marketing purposes, by live and automated means. Message and data rates may apply. Reply STOP at any time to opt out. See our <a href="/privacy">Privacy Policy</a>.</p>
         </div>
 
         <aside class="hero__aside">
@@ -697,7 +697,7 @@
         data-layout-iframe-id="inline-Q4ClU4MHx2MGfB9MtSKu-final"
         data-form-id="Q4ClU4MHx2MGfB9MtSKu"
         title="Website Form"></iframe>
-      <p class="ghl-consent">By submitting this form, you agree to be contacted by Big Horn Roofing by phone call, text message, and email at the number and email address provided, including for marketing purposes, by live and automated means. Message and data rates may apply. Reply STOP at any time to opt out. See our <a href="/privacy.html">Privacy Policy</a>.</p>
+      <p class="ghl-consent">By submitting this form, you agree to be contacted by Big Horn Roofing by phone call, text message, and email at the number and email address provided, including for marketing purposes, by live and automated means. Message and data rates may apply. Reply STOP at any time to opt out. See our <a href="/privacy">Privacy Policy</a>.</p>
     </div>
   </div>
 </section>
@@ -735,7 +735,7 @@
     </div>
     <div class="foot__bottom">
       <span>© 2026 Big Horn Roofing, LLC. All rights reserved.</span>
-      <span><a href="/privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="/terms.html">Terms</a></span>
+      <span><a href="/privacy">Privacy</a> &nbsp;·&nbsp; <a href="/terms">Terms</a></span>
     </div>
   </div>
 </footer>
@@ -743,35 +743,6 @@
 <!-- GHL form embed script -->
 <script src="https://go.otterclick.com/js/form_embed.js"></script>
 
-<!-- Google Ads conversion: fires on GHL form submit (lead) -->
-<script>
-  (function(){
-    var fired = false;
-    window.addEventListener('message', function(event){
-      if (fired) return;
-      var origin = event.origin || '';
-      if (origin.indexOf('otterclick.com') === -1 && origin.indexOf('leadconnectorhq.com') === -1) return;
-      var data = event.data;
-      var isSubmit = false;
-      try {
-        if (typeof data === 'string') {
-          isSubmit = /form.*submit|submit.*success|form_submit/i.test(data);
-        } else if (data && typeof data === 'object') {
-          var str = JSON.stringify(data).toLowerCase();
-          isSubmit = str.indexOf('submit') !== -1 && (str.indexOf('form') !== -1 || str.indexOf('success') !== -1);
-        }
-      } catch (e) { return; }
-      if (isSubmit && typeof gtag === 'function') {
-        fired = true;
-        gtag('event', 'conversion', {
-          'send_to': 'AW-17975121952/udPVCImCuJ0cEKCwmvtC',
-          'value': 1.0,
-          'currency': 'USD'
-        });
-      }
-    });
-  })();
-</script>
 
 <!-- LIGHTBOX OVERLAY -->
 <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" onclick="closeLightbox()">
