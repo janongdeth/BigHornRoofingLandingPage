@@ -96,6 +96,7 @@
   .hero h1{color:var(--ink);max-width:20ch;margin-left:auto;margin-right:auto}
   .hero h1 .accent{color:var(--orange)}
   .hero h1 .serif{color:var(--ink)}
+  .hero h1 .osu{color:#BB0000}
   .hero__sub{font-size:clamp(1.2rem,1.8vw,1.45rem);font-weight:600;color:var(--ink);max-width:32ch;margin:14px auto 28px;line-height:1.35;letter-spacing:-.01em}
   .hero__video-trigger{
     display:block;margin:0 auto 28px;padding:0;border:0;background:#000;
@@ -223,7 +224,8 @@
   @media(max-width:560px){.services__grid{grid-template-columns:1fr}}
   .service{padding:22px 20px;border:1px solid var(--line);background:#fff;transition:border-color .2s ease}
   .service:hover{border-color:var(--orange)}
-  .service__num{font-family:'Instrument Serif',serif;font-style:italic;font-size:1.6rem;color:var(--orange);line-height:1;margin-bottom:10px}
+  .service__icon{width:36px;height:36px;color:var(--orange);margin-bottom:14px;display:block}
+  .service__icon svg{width:100%;height:100%}
   .service h3{font-size:1.05rem;margin:0 0 6px;letter-spacing:-.015em}
   .service p{margin:0;color:var(--body);font-size:.92rem;line-height:1.5}
 
@@ -414,7 +416,7 @@
   <div class="wrap">
     <div class="hero__grid">
       <div>
-        <h1>A new roof, <span class="serif">done right</span>. <span class="accent">Backed for 50 years.</span> Serving families across Northwest Ohio.</h1>
+        <h1>A new roof, <span class="serif">done right</span>. <span class="accent">Backed for 50 years.</span> Serving families across <span class="osu">Northwest Ohio</span>.</h1>
         <p class="hero__sub">The last roofer you'll ever need to call.</p>
 
         <button type="button" class="hero__video-trigger" onclick="openVideoModal()" aria-label="Play video from Andrew">
@@ -493,31 +495,41 @@
     <div class="services__head">
       <div class="kicker" style="margin-bottom:10px"><b>Services</b></div>
       <h2>What I do.</h2>
-      <p>Five things I spend my days on across Northwest Ohio.</p>
+      <p>What I spend my days on across Northwest Ohio.</p>
     </div>
     <div class="services__grid">
       <div class="service">
-        <div class="service__num">01</div>
+        <div class="service__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg>
+        </div>
         <h3>Roof Replacement</h3>
         <p>Full tear-off and new install. Asphalt, designer, and impact-rated shingles.</p>
       </div>
       <div class="service">
-        <div class="service__num">02</div>
+        <div class="service__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 15a4 4 0 0 1 0-8 5.5 5.5 0 0 1 10.7-1.2A4.5 4.5 0 0 1 17 15H7Z"/><path d="m9 19 1-2"/><path d="m13 19 1-2"/><path d="m11 22 2-3"/></svg>
+        </div>
         <h3>Storm &amp; Hail Claims</h3>
         <p>I document the damage, meet your adjuster, and handle the insurance paperwork.</p>
       </div>
       <div class="service">
-        <div class="service__num">03</div>
+        <div class="service__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2.7-.7-.7-2.7 2.7-2.3Z"/></svg>
+        </div>
         <h3>Roof Repair</h3>
         <p>Leaks, blown shingles, wind damage. Fast fixes before small problems get big.</p>
       </div>
       <div class="service">
-        <div class="service__num">04</div>
+        <div class="service__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M8 21v-7h8v7"/><path d="M12 12h.01"/></svg>
+        </div>
         <h3>New Construction</h3>
         <p>Roofing on new builds for local homeowners and builders.</p>
       </div>
       <div class="service">
-        <div class="service__num">05</div>
+        <div class="service__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/><path d="M8 11h6"/><path d="M11 8v6"/></svg>
+        </div>
         <h3>Free Inspections</h3>
         <p>Drone and on-roof inspections. Written report, no pressure to hire.</p>
       </div>
